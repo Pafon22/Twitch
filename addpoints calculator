@@ -1,0 +1,63 @@
+(Ctrl+C):
+!addcom !pix+ -ul=moderator !addpoints $(1) $(urlfetch $(eval var valor=40, api='https://api.mathjs.org/v4/?expr=', real = $(2), cent='00', expr, r; if('$(3)'!='null' && '$(3)'.length == 2){cent='$(3)';} expr = 'floor%28%28'+real+'*100%2B'+cent+'%29*'+valor+'*10%5E-2%29'; r=api+expr;if('$(1)'=='null' || '$(2)' == 'null'){expr=0;}r;))
+
+
+/* ENGLISH
+ Nightbot command to calculate and add points for users who donate through payment methods other than Paypal in the StreamElements store.
+ Step 1: Add Nightbot as a supermoderator or lower the access level of the !addpoints command.
+ https://streamelements.com/dashboard/bot/user-management
+
+ Step 2: See how many points your shop gives for each dollar donated.
+ https://streamelements.com/dashboard/loyalty (tip bonus)
+
+ Step 3: Add the following command to the chat, changing the value 40 to the number from Step 2.
+ !addcom !pix+ -ul=moderator !addpoints $(1) $(urlfetch $(eval var valor=40, api='https://api.mathjs.org/v4/?expr=', real = $(2), cent='00', expr, r; if('$(3)'!='null' && '$(3)'.length == 2){cent='$(3)';} expr = 'floor%28%28'+real+'*100%2B'+cent+'%29*'+valor+'*10%5E-2%29'; r=api+expr;if('$(1)'=='null' || '$(2)' == 'null'){expr=0;}r;))
+
+ Example of a store that gives 100 points for each dollar donated:
+ !addcom !pix+ -ul=moderator !addpoints $(1) $(urlfetch $(eval var valor=100, api='https://api.mathjs.org/v4/?expr=', real = $(2), cent='00', expr, r; if('$(3)'!='null' && '$(3)'.length == 2){cent='$(3)';} expr = 'floor%28%28'+real+'*100%2B'+cent+'%29*'+valor+'*10%5E-2%29'; r=api+expr;if('$(1)'=='null' || '$(2)' == 'null'){expr=0;}r;))
+
+ To edit the command, change !addcom to !editcom
+
+ To add points, use:
+ !pix+ user dollar cents
+
+ Example of a donation of $5.20 by Pafon22:
+ !pix+ pafon22 5 20
+
+ Cents must always be 2 digits or leave empty in place of 00.
+ Ex.:
+ !pix+ pafon22 22 05
+ !pix+ pafon22 6 00
+ !pix+ pafon22 3
+*/
+
+
+/* PORTUGUÊS-BR
+ Comando do Nightbot para calcular e adicionar pontos para usuários que doarem por meios de pagamento diferentes do Paypal na loja do StreamElements.
+ Passo 1: Adicionar o Nightbot como supermoderador ou diminuir o level de acesso do comando !addpoints.
+ https://streamelements.com/dashboard/bot/user-management
+ 
+ Passo 2: Ver quantos pontos sua lojinha dá para cada real doado.
+ https://streamelements.com/dashboard/loyalty (bônus para doações)
+
+Passo 3: Adicionar o seguinte comando no chat, alterando o 40 em valor para o número do Passo 2.
+!addcom !pix+ -ul=moderator !addpoints $(1) $(urlfetch $(eval var valor=40, api='https://api.mathjs.org/v4/?expr=', real = $(2), cent='00', expr, r; if('$(3)'!='null' && '$(3)'.length == 2){cent='$(3)';} expr = 'floor%28%28'+real+'*100%2B'+cent+'%29*'+valor+'*10%5E-2%29'; r=api+expr;if('$(1)'=='null' || '$(2)' == 'null'){expr=0;}r;))
+
+Exemplo de loja que dá 100 pontos para cada real doado:
+!addcom !pix+ -ul=moderator !addpoints $(1) $(urlfetch $(eval var valor=100, api='https://api.mathjs.org/v4/?expr=', real = $(2), cent='00', expr, r; if('$(3)'!='null' && '$(3)'.length == 2){cent='$(3)';} expr = 'floor%28%28'+real+'*100%2B'+cent+'%29*'+valor+'*10%5E-2%29'; r=api+expr;if('$(1)'=='null' || '$(2)' == 'null'){expr=0;}r;))
+
+Para editar o comando, mude !addcom para !editcom
+
+Para atribuir os pontos, use:
+!pix+ user real centavos
+
+Exemplo de doação de R$5,20 por Pafon22:
+!pix+ pafon22 5 20
+
+Os centavos sempre devem ter 2 algarismos ou deixar vazio no lugar de 00.
+Ex.:
+!pix+ pafon22 22 05
+!pix+ pafon22 6 00
+!pix+ pafon22 3
+
+*/
