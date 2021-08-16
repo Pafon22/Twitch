@@ -1,6 +1,9 @@
 (Ctrl+C):
 !addcom !pix+ -ul=moderator !addpoints $(1) $(urlfetch $(eval var valor=40, api='https://api.mathjs.org/v4/?expr=', real = $(2), cent='00', expr, r; if('$(3)'!='null' && '$(3)'.length == 2){cent='$(3)';} expr = 'floor%28%28'+real+'*100%2B'+cent+'%29*'+valor+'*10%5E-2%29'; r=api+expr;if('$(1)'=='null' || '$(2)' == 'null'){expr=0;}r;))
 
+(Options2):
+(Restrict for selected moderators)
+!editcom !pix+ -ul=moderator !addpoints $(1) $(urlfetch $(eval var valor=50, mod = '$(user)', mods = ['pafon22', 'nickmoderator2', 'nickmoderator3', 'nickmoderator4'], api='https://api.mathjs.org/v4/?expr=', real = $(2), cent='00', expr, r; if('$(3)'!='null' && '$(3)'.length == 2){cent='$(3)';} expr = 'floor%28%28'+real+'*100%2B'+cent+'%29*'+valor+'*10%5E-2%29'; ;if('$(1)'=='null' || '$(2)' == 'null' || !mods.includes(mod.toLowerCase())){expr=0;} r=api+expr; r;))
 
 /* ENGLISH
  Nightbot command to calculate and add points for users who donate through payment methods other than Paypal in the StreamElements store.
